@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "deepgram-api-auto"
+version = "0.1.0"
+description = "Auto transcribe files with Deepgram"
+authors = ["Dev Gill <26435947+sdevgill@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "deepgram_api_auto"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+deepgram-sdk = "^2.4.0"
+python-dotenv = "^1.0.0"
+tinytag = "^1.9.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
