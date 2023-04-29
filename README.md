@@ -3,6 +3,8 @@
 A simple and easy-to-use audio transcription app that uses Deepgram's API
 to transcribe audio files and calculate the transcription cost, automatically. It makes use of their latest model, [Nova](https://blog.deepgram.com/nova-speech-to-text-whisper-api/).
 
+This implementation uses their paragraphs features, which is not available with OpenAI's Whisper. Using paragraphs in transcriptions enhances readability by providing structure and organization..
+
 ## Requirements
 
 - Python 3.10 or higher
