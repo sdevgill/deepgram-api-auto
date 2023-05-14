@@ -36,6 +36,7 @@ def transcribe_audio(file_path, file_extension):
         options = {
             "paragraphs": True,
             "punctuate": True,
+            "diarize": True,
             "model": "nova",
             "language": "en-US",
         }
