@@ -34,19 +34,18 @@ def transcribe_audio(file_path, file_extension):
     with open(file_path, "rb") as audio:
         source = {"buffer": audio, "mimetype": mimetype}
         options = {
-            "paragraphs": True,
-            "punctuate": True,
-            "diarize": True,
+            "smart_format": True,
+            "summarize": True,
+            # "diarize": True,
             "model": "nova",
-            "language": "en-US",
+            "language": "en",
         }
 
         print("Requesting transcript...")
         response = dg_client.transcription.sync_prerecorded(source, options)
-        # Use paragraphs
         paragraphs_data = response["results"]["channels"][0]["alternatives"][0][
             "paragraphs"
-        ]["paragraphs"]
+        ]
         return paragraphs_data
         # No paragraphs
         # transcript = response["results"]["channels"][0]["alternatives"][0]["transcript"]
